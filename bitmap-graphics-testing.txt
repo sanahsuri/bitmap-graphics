@@ -1,0 +1,679 @@
+/***********************************************************************
+ * Homework: Bitmap Graphics
+ ***********************************************************************/
+
+Test Plan:
+I. Test for entering a 16 bit image
+II. Test for entering a 64 bit image
+III. Test for entering a new image
+IV. Test for image complement
+V. Test for shifting image left
+VI. Test for shifting image right
+VII. Test for shifting image up
+VIII. Test for shifting image down
+IX. Test for printing image
+X. Test for quitting program
+
+Test Cases:
+
+I. Test for entering a 16 bit image
+   Input:
+   image16.txt (file submitted with homework)
+   ./bitmap-graphics < image16.txt
+
+   Expected output:
+   The program accepts and prints a 16 bit image
+
+   Actual run:
+   $ ./bitmap-graphics < image16.txt
+   Enter image rows:
+   Menu Options
+      I - Enter a new image
+      C - Image complement
+      L - Shift image left
+      R - Shift image right
+      U - Shift image up
+      D - Shift image down
+      P - Print image to screen
+      Q - Quit
+    Enter option:
+        *******
+      **       **
+     **         **
+     * *       * *
+    *   *     *   *
+    *    *   *    *
+    *     * *     *
+    *      *      **
+    *     * *     *
+    *    *   *    *
+    *   *     *   *
+     * *       * *
+     **         **
+      **       **
+        *******
+           *
+    Menu Options
+      I - Enter a new image
+      C - Image complement
+      L - Shift image left
+      R - Shift image right
+      U - Shift image up
+      D - Shift image down
+      P - Print image to screen
+      Q - Quit
+    Enter option:
+    Program terminated.
+
+
+
+
+II. Test for entering a 64 bit image
+    Input:
+    image64.txt (file submitted with homework)
+    ./bitmap-graphics < image64.txt
+
+    Expected output:
+    The program accepts and prints a 64 bit image
+
+    Actual run:
+    $ ./bitmap-graphics < image64.txt
+    Enter image rows:
+    Menu Options
+      I - Enter a new image
+      C - Image complement
+      L - Shift image left
+      R - Shift image right
+      U - Shift image up
+      D - Shift image down
+      P - Print image to screen
+      Q - Quit
+    Enter option:
+    Menu Options
+      I - Enter a new image
+      C - Image complement
+      L - Shift image left
+      R - Shift image right
+      U - Shift image up
+      D - Shift image down
+      P - Print image to screen
+      Q - Quit
+    Enter option:
+    ****************************************************************
+    **** ***************************************************** *****
+    ****  ***************************************************  *****
+    ****   *************************************************   *****
+    ****     *********************************************     *****
+    ****         **************************************        *****
+    ****               *************************               *****
+    ****                     **************                    *****
+    ****                       *********                       *****
+    ****                        *******                        *****
+    ****                         *****                         *****
+    ****                         *****                         *****
+    *****                         ***                          *****
+    *****                         ***                         ******
+    *****                         ***                         ******
+    ******                        ***                        *******
+    *******                       ***                       ********
+    **** ***                      ***                      *** *****
+    ****  ****                    ***                    ****  *****
+    ****   ********               ***               ********   *****
+    ****     *************        ***        *************     *****
+    ****         *************    ***     ************         *****
+    ****                *******   ***   ********               *****
+    ****                     **** *** ****                     *****
+    ****                       *** *****                       *****
+    ****                        *******                        *****
+    ****                         *****                         *****
+    ****                         *****                         *****
+    *****                         ***                          *****
+    *****                         ***                         ******
+    *****                         ***                         ******
+    ******                        ***                        *******
+    *******                       ***                       ********
+    ********                      ***                      *********
+    **********                    ***                    ***********
+    ****************              ***              *****************
+    **********************        ***        ***********************
+    **************************    ***    ***************************
+    ****************************  ***   ****************************
+    *****************************  ** ******************************
+    ****************************** *********************************
+    ****************************************************************
+    ****************************************************************
+    ****************************************************************
+    ********************      ************     *********************
+    ******************    **    ********    *    *******************
+    *****************   *******  ******  *******  ******************
+    *****************  *********  ***** *********  *****************
+    ****************  **********  ****  *********  *****************
+    **************** *****************  ****************************
+    ***************  *****************  ****************************
+    ***************  ******************   **************************
+    ***************  *******************     ***********************
+    ***************  **********************      *******************
+    ***************  **************************   ******************
+    ***************  ****************************  *****************
+    ***************  ************ **************** *****************
+    **************** ***********  **** *********** *****************
+    ****************  **********  ****  ********** *****************
+    *****************  ********  *****  *********  *****************
+    *****************   ******  *******  *******   *****************
+    *******************        *********         *******************
+    *********************   **************    **********************
+    ****************************************************************
+    Menu Options
+      I - Enter a new image
+      C - Image complement
+      L - Shift image left
+      R - Shift image right
+      U - Shift image up
+      D - Shift image down
+      P - Print image to screen
+      Q - Quit
+    Enter option:
+    Program terminated.
+
+III. Test for entering a new image
+  1.  Input:
+      I
+      32768
+      16384
+      8192
+      4096
+      2048
+      1024
+      512
+      256
+      128
+      64
+      32
+      16
+      8
+      4
+      2
+      1
+      P
+
+      Expected output:
+      The program accepts the input and places is it in the
+      image array and then prints it (printing is for visual
+      representation of the entering of the image)
+
+      Actual run:
+      $ ./bitmap-graphics
+      Enter image rows:
+      32768
+      16384
+      8192
+      4096
+      2048
+      1024
+      512
+      256
+      128
+      64
+      32
+      16
+      8
+      4
+      2
+      1
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      P
+      *
+       *
+        *
+         *
+          *
+           *
+            *
+             *
+              *
+               *
+                *
+                 *
+                  *
+                   *
+                    *
+                     *
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+
+
+IV. Test for image complement
+  1.  Input:
+      C
+      P (continuing from input from test case III)
+
+      Expected output:
+      * and replaced by spaces in the image printed above
+      in the previous test case
+
+      Actual run:
+      Enter option:
+      C
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      P
+       ***************
+      * **************
+      ** *************
+      *** ************
+      **** ***********
+      ***** **********
+      ****** *********
+      ******* ********
+      ******** *******
+      ********* ******
+      ********** *****
+      *********** ****
+      ************ ***
+      ************* **
+      ************** *
+      ***************
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+
+V. Testing for shifting image left
+  1. Input:
+     L
+     L
+     L
+     P (continuing from input from test case IV)
+
+     Expected output:
+     The image printed in the previous test  case barrel shifts
+     towards the left. Applying 'L' several times for clarity
+
+     Actual run:
+     Enter option:
+     L
+     Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      L
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      L
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      P
+      ************* **
+      ************** *
+      ***************
+       ***************
+      * **************
+      ** *************
+      *** ************
+      **** ***********
+      ***** **********
+      ****** *********
+      ******* ********
+      ******** *******
+      ********* ******
+      ********** *****
+      *********** ****
+      ************ ***
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+
+VI. Test for shifting image right
+  1. Input:
+     R
+     R
+     R
+     P (continuing from the previous test case V)
+
+     Expected output:
+     The program prints the image printed before the left
+     shifting showing that the image has been appropriately
+     barrel shifted the same amount towards the right
+
+     Actual run:
+     Enter option:
+     R
+     Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      R
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      R
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      P
+       ***************
+      * **************
+      ** *************
+      *** ************
+      **** ***********
+      ***** **********
+      ****** *********
+      ******* ********
+      ******** *******
+      ********* ******
+      ********** *****
+      *********** ****
+      ************ ***
+      ************* **
+      ************** *
+      ***************
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+
+VII. Test for shifting image up
+  1. Input:
+     U
+     P (continuing from previous test cases)
+
+     Expected output:
+     The image moves up like a barrel, that is, the rows
+     move up with top row becoming the bottom row
+
+     Actual run:
+     Enter option:
+     U
+     Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      P
+      * **************
+      ** *************
+      *** ************
+      **** ***********
+      ***** **********
+      ****** *********
+      ******* ********
+      ******** *******
+      ********* ******
+      ********** *****
+      *********** ****
+      ************ ***
+      ************* **
+      ************** *
+      ***************
+       ***************
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+
+VIII. Test for shifting image down
+  1. Input:
+     D
+     P (continuing from test case VII)
+
+     Expected output:
+     The image moves down like a barrel with all the rows
+     moving down and the top row becoming what the bottom
+     row previously was. In this case, moving down negates
+     the moving up that took place in the previous case and
+     we get the original image
+
+     Actual run:
+     Enter option:
+     D
+     Menu Options
+      I - Enter a new image
+      C - Image complement
+      L - Shift image left
+      R - Shift image right
+      U - Shift image up
+      D - Shift image down
+      P - Print image to screen
+      Q - Quit
+    Enter option:
+    P
+     ***************
+    * **************
+    ** *************
+    *** ************
+    **** ***********
+    ***** **********
+    ****** *********
+    ******* ********
+    ******** *******
+    ********* ******
+    ********** *****
+    *********** ****
+    ************ ***
+    ************* **
+    ************** *
+    ***************
+    Menu Options
+      I - Enter a new image
+      C - Image complement
+      L - Shift image left
+      R - Shift image right
+      U - Shift image up
+      D - Shift image down
+      P - Print image to screen
+      Q - Quit
+    Enter option:
+
+IX. Test for printing image
+  1. Input:
+     image16.txt
+     ./bitmap-graphics < image16.txt
+
+     Expected output:
+     The program prints a 16 bit image when option 'P'
+     is inputted
+
+     Actual run:
+     $ ./bitmap-graphics < image16.txt
+     Enter image rows:
+     Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+          *******
+        **       **
+       **         **
+       * *       * *
+      *   *     *   *
+      *    *   *    *
+      *     * *     *
+      *      *      **
+      *     * *     *
+      *    *   *    *
+      *   *     *   *
+       * *       * *
+       **         **
+        **       **
+          *******
+             *
+      Menu Options
+        I - Enter a new image
+        C - Image complement
+        L - Shift image left
+        R - Shift image right
+        U - Shift image up
+        D - Shift image down
+        P - Print image to screen
+        Q - Quit
+      Enter option:
+      Program terminated.
+
+X. Test for quitting
+  1. Input:
+      32768
+      16384
+      8192
+      4096
+      2048
+      1024
+      512
+      256
+      128
+      64
+      32
+      16
+      8
+      4
+      2
+      1
+      Q
+
+     Expected output:
+     The program terminates when 'Q' is inputted
+
+     Actual run:
+     $ ./bitmap-graphics
+     Enter image rows:
+     32768
+     16384
+     8192
+     4096
+     2048
+     1024
+     512
+     256
+     128
+     64
+     32
+     16
+     8
+     4
+     2
+     1
+     Menu Options
+     I - Enter a new image
+     C - Image complement
+     L - Shift image left
+     R - Shift image right
+     U - Shift image up
+     D - Shift image down
+     P - Print image to screen
+     Q - Quit
+     Enter option:
+     Q
+     Program terminated.
+
+Conclusion Statement: The program successfully takes in input as unsigned
+ints and prints 16 bit and 64 bit images if we change DTYPE to unsigned long
+and DFRMT to "%lu". The function first asks for user input to enter DSIZE
+unsigned ints which represent the rows. These numbers are then entered into
+an array. The rows of the input image are then transformed using a higher order
+procedure that takes a function pointer and applies it to each element of the
+input array. The program flips the bits of the image, moves it left, right, up
+and down depending on the users input and also prints it. The program also
+successfully terminates when the user gives the command to quit. The program
+takes into account both uppercase and lowercase commands. The program displays
+and manipulates numbers to display bitmap graphics.
